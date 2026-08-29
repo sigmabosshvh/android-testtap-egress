@@ -13,6 +13,8 @@ The shell-privileged part of the PoC runs as an ADB-backed Shizuku UserService u
 
 As an end-to-end check, the PoC sends a TCP SYN with a fixed sequence number (`0x12345678`) and observes the remote SYN-ACK acknowledging `0x12345679`.
 
+<img src="docs/Screenshot_20260829-183652.png" width="320" alt="Successful PoC run">
+
 ## Technical writeup
 See [docs/writeup.md](docs/writeup.md).
 
