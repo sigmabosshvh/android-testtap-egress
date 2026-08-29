@@ -9,11 +9,15 @@ The original proof of concept was completed on August 16, 2026. This writeup was
 
 **Arbitrary L3/L4 packet construction & egress.**
 
+The shell-privileged part of the PoC runs as an ADB-backed Shizuku UserService under the Android `shell` UID 2000. The app itself does not obtain CAP_NET_RAW or raw-socket access; packets are constructed in userspace and forwarded through a framework-managed test TAP + tethering path.
+
+As an end-to-end check, the PoC sends a TCP SYN with a fixed sequence number (`0x12345678`) and observes the remote SYN-ACK acknowledging `0x12345679`.
+
 ## Technical writeup
 See [docs/writeup.md](docs/writeup.md).
 
 ## Requirements
 - Android device
-- Shizuku started through ADB
+- ADB-backed Shizuku
 - Internet connectivity
 - Compatible Android Ethernet/TestNetwork framework implementation
