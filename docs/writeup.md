@@ -114,7 +114,9 @@ This provides a simple end-to-end proof that the handcrafted TCP header reached 
 
 The most interesting security-model property of this approach is what the process **does not** have.
 
-![Figure 1](Screenshot_20260829-183652.png)
+<p align="center">
+  <img src="Screenshot_20260829-183652.png" width="360" alt="PoC output showing empty `CapEff`, denied `AF_PACKET/SOCK_RAW`, and successful `SEQ -> ACK` Internet round trip.">
+</p>
 
 **Figure 1:** PoC output showing empty `CapEff`, denied `AF_PACKET/SOCK_RAW`, and successful `SEQ -> ACK` Internet round trip.
 
